@@ -33,7 +33,6 @@ while(selected_option != 'q'):
         print('You chose Option: ' + selected_option)
         if(int(selected_option) < 7 & int(selected_option) > 4):
             num1 = float(input("Provide number 1: "))
-            return num1
         elif(int(selected_option) < 4 & int(selected_option) > 0):
             num2 = float(input("Provide number 2: "))
         else:
