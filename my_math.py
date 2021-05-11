@@ -7,10 +7,12 @@ def is_it_odd(num):
     return False
 
 def print_n_times(text):
-    how_many = int(input("How many times? "))
-
-    for num in range(0, how_many):
-        print(text)
+    how_many = input("How many times? ")
+    if(how_many.isdigit()):
+        for num in range(0, int(how_many)):
+            print(text)
+    else:
+        print("Please enter a number only")
 
 def is_it_prime(num):
     print("IDk yet")

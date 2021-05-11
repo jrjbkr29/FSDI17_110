@@ -31,38 +31,39 @@ while(selected_option != 'q'):
         exit()
     elif(selected_option.isdigit()):
         print('You chose Option: ' + selected_option)
-        if(int(selected_option) < 7 & int(selected_option) > 4):
+        if(int(selected_option) < 7 and int(selected_option) > 0):
             num1 = float(input("Provide number 1: "))
-        elif(int(selected_option) < 4 & int(selected_option) > 0):
+        elif (selected_option == '7'):
+            print_text = input("Enter text to print: ")
+            print(my_math.print_n_times(print_text))
+
+        if(int(selected_option) < 7 and int(selected_option) > 4):
+            if (selected_option == '5'):
+                if(my_math.is_it_odd(num1)):
+                    print("Your number is odd")
+                else:
+                    print("Your number is even")
+            elif (selected_option == "6"):
+                my_math.is_it_prime(num1)
+
+        elif(int(selected_option) < 5 and int(selected_option) > 0):
             num2 = float(input("Provide number 2: "))
+            if(selected_option == '1'):
+                res = num1 + num2
+                print(F'Result: {res}')
+            elif (selected_option == '2'):
+                res = int(num1) - int(num2)
+                print(F'Result: {res}')
+            elif (selected_option == '3'):
+                res = int(num1) * int(num2)
+                print(F'Result: {res}')
+            elif (selected_option == '4'):
+                res = int(num1) / int(num2)
+                print(F'Result: {res}')
         else:
             print("Please enter a number from the list")
     else:
-        print("Please enter a number from the list")
+        print("Please enter a number")
 
-
-    if(selected_option == '1'):
-        res = num1 + num2
-        print(F'Result: {res}')
-    elif (selected_option == '2'):
-        res = int(num1) - int(num2)
-        print(F'Result: {res}')
-    elif (selected_option == '3'):
-        res = int(num1) * int(num2)
-        print(F'Result: {res}')
-    elif (selected_option == '4'):
-        res = int(num1) / int(num2)
-        print(F'Result: {res}')
-    elif (selected_option == '5'):
-        if(my_math.is_it_odd(num1)):
-            print("Your number is odd")
-        else:
-            print("Your number is even")
-    elif (selected_option == "6"):
-        my_math.is_it_prime(num1)
-    elif (selected_option == '7'):
-        print_text = input("Enter text to print: ")
-        print(my_math.print_n_times(print_text))
-    
     time.sleep(2)
 
