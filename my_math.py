@@ -15,4 +15,22 @@ def print_n_times(text):
         print("Please enter a number only")
 
 def is_it_prime(num):
-    print("IDk yet")
+    is_not_prime = False
+    if(num > 1):
+        for i in range(2, num):
+            if (num % i) == 0:
+                is_not_prime = True
+                break
+    if is_not_prime:
+        print(f"Your number: {str(num)} is not prime")
+                
+    else:
+        print(f"Your number: {str(num)} is prime")       
+
+def  user_age(dob, year):
+    user_age = int(year) - int(dob)
+    return f"You are {str(user_age)} years old"
+
+def calc_tip(total, tip):
+    tip_amount = float(total) * (float(tip)/100)
+    return f"Tip amount: ${str(tip_amount)}"
